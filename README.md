@@ -10,6 +10,7 @@
 -   add tests
 -   add debugger settings
 -   make a github org with @wolff that matches all the projects you wanna do
+-   cd/npm i and git init . after template creation
 
 Future templates
 
