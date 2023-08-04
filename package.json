@@ -28,14 +28,14 @@
         "./dist"
     ],
     "bin": {
-        "template-generator": "./dist/index.js"
+        "wolff-gen": "./dist/index.js"
     },
     "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1",
         "start": "ts-node src/index.ts",
+        "typecheck": "tsc --noEmit",
         "build": "tsup && shx rm -rf dist/templates && shx cp -r src/templates dist",
-        "publish": "npm run build && npm publish",
-        "publish:dry": "npm run build && npm publish --dry-run"
+        "prepack": "npm run build",
+        "release": "release-it"
     },
     "keywords": [],
     "author": "",
@@ -45,6 +45,7 @@
         "@types/inquirer": "^9.0.3",
         "ejs": "^3.1.9",
         "nodemon": "^3.0.1",
+        "release-it": "^16.1.3",
         "shx": "^0.3.4",
         "ts-node": "^10.9.1",
         "tsup": "^7.2.0",

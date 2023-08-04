@@ -1,5 +1,12 @@
+import _ from 'lodash'
+
+import 'dotenv/config'
+
+import { module } from '~/modules'
+import { util } from '~/utils'
+
 function main() {
-    console.log('Hello world')
+  util()
 }
 
 main()

@@ -5,6 +5,7 @@ find a way to share base code between ts and js projects
 add tsup to typescript templates
 add prettier base
 add eslint
+cli option for a future npm package or not
 
 Main
 
