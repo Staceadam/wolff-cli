@@ -1,0 +1,48 @@
+{
+	"name": "wolff-cli",
+	"version": "1.0.0",
+	"description": "",
+	"main": "./dist/index.js",
+	"module": "./dist/index.mjs",
+	"types": "./dist/index.d.ts",
+	"exports": {
+	  ".": {
+		"require": "./dist/index.js",
+		"import": "./dist/index.mjs",
+		"types": "./dist/index.d.ts"
+	  }
+	},
+	"tsup": {
+	  "entry": ["src/index.ts"],
+	  "format": ["cjs", "esm"],
+	  "splitting": false,
+	  "sourcemap": true,
+	  "clean": true
+	},
+	"files": ["./dist"],
+	"bin": {
+		"template-generator": "./dist/index.js"
+	},
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"start": "ts-node src/index.ts",
+		"build": "tsup && shx rm -rf dist/templates && shx cp -r src/templates dist",
+		"publish": "npm run build && npm publish"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"devDependencies": {
+		"@types/ejs": "^3.1.2",
+		"@types/inquirer": "^9.0.3",
+		"ejs": "^3.1.9",
+		"nodemon": "^3.0.1",
+		"shx": "^0.3.4",
+		"ts-node": "^10.9.1",
+		"tsup": "^7.2.0",
+		"typescript": "^5.1.6"
+	},
+	"dependencies": {
+		"inquirer": "^8.2.6"
+	}
+}
