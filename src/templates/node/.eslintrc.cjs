@@ -1,27 +1,25 @@
-/** @type {import("eslint").Linter.Config} */
+/** @type {import("eslint").Linter.Config} EslintConfig */
+/** @typedef  {import("prettier").Config} PrettierConfig*/
+
+/** @type { PrettierConfig | EslintConfig } */
 module.exports = {
-    "env": {
-        "browser": true,
-        "es2021": true
-    },
-    "extends": ["standard-with-typescript", "prettier"],
-    "overrides": [
-        {
-            "env": {
-                "node": true
-            },
-            "files": [
-                ".eslintrc.{js,cjs}"
-            ],
-            "parserOptions": {
-                "sourceType": "script"
-            }
-        }
+  env: {
+    browser: true,
+    es2021: true,
+  },
+  extends: ["prettier"],
+  rules: {
+    "prettier/prettier": [
+      "error",
+      {
+        arrowParens: "always",
+        printWidth: 100,
+        singleQuote: true,
+        jsxSingleQuote: true,
+        semi: false,
+        trailingComma: "all",
+        tabWidth: 2,
+      },
     ],
-    "parserOptions": {
-        "ecmaVersion": "latest",
-        "sourceType": "module"
-    },
-    "rules": {
-    }
+  },
 }

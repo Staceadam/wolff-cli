@@ -12,18 +12,6 @@
             "types": "./dist/index.d.ts"
         }
     },
-    "tsup": {
-        "entry": [
-            "src/index.ts"
-        ],
-        "format": [
-            "cjs",
-            "esm"
-        ],
-        "splitting": false,
-        "sourcemap": true,
-        "clean": true
-    },
     "files": [
         "./dist"
     ],
@@ -36,6 +24,18 @@
         "build": "tsup && shx rm -rf dist/templates && shx cp -r src/templates dist",
         "prepack": "npm run build",
         "release": "release-it"
+    },
+    "tsup": {
+        "entry": [
+            "src/index.ts"
+        ],
+        "format": [
+            "cjs",
+            "esm"
+        ],
+        "splitting": false,
+        "sourcemap": true,
+        "clean": true
     },
     "keywords": [],
     "author": "",

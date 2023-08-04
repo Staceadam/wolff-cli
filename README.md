@@ -1,23 +1,22 @@
-build for both esm and cjs in templates
-add plop at base and make something where you can quickly add new base templates
-add plop to templates
-find a way to share base code between ts and js projects
-add tsup to typescript templates
-add prettier base
-add eslint
-cli option for a future npm package or not
+## TODO
 
-Main
+-   make main function more modular
+-   include options for published and unpublished templates
+-   add other templates
+-   add github action to release
+-   add prettier and eslint
+-   base a base template that can be pulled from across all templates
+    -   theres too much in common and to much to update between them all
+-   add tests
+-   add debugger settings
+-   make a github org with @wolff that matches all the projects you wanna do
 
--   add semver
-    -   need a way to easily update the package.json version and then publish
-    -   this could be done with a devops github job maybe and base the branch on main
+Future templates
 
-all tooling should be a multiple select prompt
+-   turbo monorepo
 
-future templates
+    -   next/react-native
 
--   turbo
 -   cli
     -   with prompts
     -   without prompts
